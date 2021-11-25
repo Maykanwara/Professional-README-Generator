@@ -1,8 +1,8 @@
 
-# fgsg
-https://github.com/ggdgdg
+# GOOD README GENERATOR
+https://github.com/Maykanwara
 # Description
-gdgdgd
+description
 # Table of Contents
 * [Installation](#installation)
 * [Usage](#usage)
@@ -13,13 +13,13 @@ gdgdgd
 # Installation
 The following nescessary dependencies must be installed to run the application
 # Usage
-In order to use this app, gddggd
+In order to use this app, usage
 # License
 This project is licensed under the BSD license. 
 ![Github license](https://img.shields.io/badge/License-IPL_1.0-blue.svg)
 # Contributing
-Contributor: gdgdgg
+Contributor: contributors
 # Tests
-The following is needed to run the test: ggddg
+The following is needed to run the test: tests
 # Questions
-If you have any Questions about the report,open an issue or contact gddggd
+If you have any Questions about the report,open an issue or contact usage

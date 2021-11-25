@@ -87,18 +87,7 @@ function writeFile(fileName, data) {
     })
 }
 
-// function init() {
-    // inquirer.prompt(questions)
-        // .then(function(data) {
-        //     writeFile("README.md", generateMarkdown(data));
-        //     console.log(data)
-        // })
 
-//     .then(answers => {
-//         renderLicense(answer)
-//         generateMarkdown(answer)
-//     })
-// }
 
  init();
 
