@@ -1,13 +1,13 @@
 const inquirer = require('inquirer');
-const fs = requirer('fs');
-const util = requirer("util");
+const fs = require('fs');
+const util = require("util");
 
-const generateMarkdown = require('./util/generateMarkdown');
+const generateMarkdown = require('./generateMarkdown');
 
 
 function init() {
     getAnswers()
-}
+};
 
 function getAnswers() {
     inquirer
@@ -21,7 +21,7 @@ function getAnswers() {
             type: 'list',
             message: 'Choose the appropriate license for this project',
             name: 'license',
-            Choices: [
+            choices: [
                 'BSD',
                 'MIT',
                 'IBM',
@@ -34,11 +34,7 @@ function getAnswers() {
             message: 'Describe your project: ',
             name: 'description',
         },
-        {
-            type: 'input',
-            message: 'Describe your project: ',
-            name: 'description',
-        },
+        
         {
             type: 'input',
             message: 'List any installation instructions for this project ',
@@ -52,7 +48,7 @@ function getAnswers() {
         {
             type: 'input',
             message: 'List any contributors  for this project: ',
-            name: 'description',
+            name: 'contributors',
         },
         {
             type: 'input',
@@ -71,11 +67,15 @@ function getAnswers() {
             name: 'email',
             }
         ])
-             
+        .then(function(data) {
+            writeFile("README.md", generateMarkdown(data));
+            console.log(data)
+        })
+    }   
 
 function writeFile(fileName, data) {
 
-    fs.write(fileName, data, function(err) {
+    fs.writeFile(fileName, data, function(err) {
         console.log(fileName)
         console.log(data)
         if (err) {
@@ -83,17 +83,17 @@ function writeFile(fileName, data) {
         
         } else {
             console.log("success")
-        }
+        };
     })
 }
 
-function init() {
-    inquirer.prompt(questions)
-        .then(function(data) {
-            writeFile("README.md", generateMarkdown(data));
-            console.log(data)
-        })
-}
+// function init() {
+    // inquirer.prompt(questions)
+        // .then(function(data) {
+        //     writeFile("README.md", generateMarkdown(data));
+        //     console.log(data)
+        // })
+
 //     .then(answers => {
 //         renderLicense(answer)
 //         generateMarkdown(answer)
